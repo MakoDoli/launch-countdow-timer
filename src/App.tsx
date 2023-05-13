@@ -4,14 +4,18 @@ import { useEffect, useState } from "react";
 import Numbers from "./Components/Numbers";
 
 function App() {
-  const [days, setDays] = useState<number | null>(null);
+  const [days, setDays] = useState<number>(0);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
 
+  const [className, setClassName] = useState("");
+
   useEffect(() => {
     //set countdown time amount in seconds
     const timeSet = 1209600000;
+    //or set date directly
+    // const countdownTime = new Date("Jan 1, 2024  00:00:00").getTime();
     const countdownTime = new Date().getTime() + timeSet;
     const countDown = setInterval(function () {
       // Get the current time
@@ -40,15 +44,22 @@ function App() {
     return () => clearInterval(countDown);
   }, []);
 
+  useEffect(() => {
+    setClassName("active");
+  }, [seconds]);
+  useEffect(() => {
+    if (className === "active") setClassName("active2");
+  }, [seconds]);
+
   return (
     <main>
       <div className="main">
         <h1> WE'RE LAUNCHING SOON</h1>
         <div className="count">
-          <Numbers number={days} />
-          <Numbers number={hours} />
-          <Numbers number={minutes} />
-          <Numbers number={seconds} />
+          <Numbers number={days} class={""} />
+          <Numbers number={hours} class={""} />
+          <Numbers number={minutes} class={""} />
+          <Numbers number={seconds} class={className} blink={"blink"} />
         </div>
         <div className="grid">
           <p className="parts">days</p>
