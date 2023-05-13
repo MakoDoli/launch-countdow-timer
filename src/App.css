@@ -44,7 +44,6 @@ h1 {
   position: relative;
   border-radius: 4px 4px 8px 8px;
   overflow: hidden;
-  transition: 0.8s ease-in;
 }
 .upper,
 .lower {
@@ -150,4 +149,6 @@ svg {
 }
 svg path:hover {
   fill: #fb5e84;
+}
+@media screen and (min-width: 1050px) {
 }
