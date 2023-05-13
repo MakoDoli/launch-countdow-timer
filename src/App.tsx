@@ -1,6 +1,7 @@
 import "./App.css";
-import Contacts from "./Contacts";
+import Contacts from "./Components/Contacts";
 import { useEffect, useState } from "react";
+import Numbers from "./Components/Numbers";
 
 function App() {
   const [days, setDays] = useState<number | null>(null);
@@ -44,38 +45,10 @@ function App() {
       <div className="main">
         <h1> WE'RE LAUNCHING SOON</h1>
         <div className="count">
-          <div className="time">
-            <div className="upper"></div>
-            <div className="number">{days}</div>
-            <div className="dot dot-1"></div>
-            <div className="dot dot-2"></div>
-            <div className="line"></div>
-            <div className="lower"></div>
-          </div>
-          <div className="time">
-            <div className="upper"></div>
-            <div className="number">{hours}</div>
-            <div className="dot dot-1"></div>
-            <div className="dot dot-2"></div>
-            <div className="line"></div>
-            <div className="lower"></div>
-          </div>
-          <div className="time">
-            <div className="upper"></div>
-            <div className="number">{minutes}</div>
-            <div className="dot dot-1"></div>
-            <div className="dot dot-2"></div>
-            <div className="line"></div>
-            <div className="lower"></div>
-          </div>
-          <div className="time">
-            <div className="upper"></div>
-            <div className="number">{seconds}</div>
-            <div className="dot dot-1"></div>
-            <div className="dot dot-2"></div>
-            <div className="line"></div>
-            <div className="lower"></div>
-          </div>
+          <Numbers number={days} />
+          <Numbers number={hours} />
+          <Numbers number={minutes} />
+          <Numbers number={seconds} />
         </div>
         <div className="grid">
           <p className="parts">days</p>
