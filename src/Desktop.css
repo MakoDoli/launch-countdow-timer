@@ -1,0 +1,54 @@
+@media screen and (min-width: 1050px) {
+  h1 {
+    font-size: 22px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 7.5px;
+  }
+  .count,
+  .grid {
+    gap: 32px;
+    width: 656px;
+  }
+  .time {
+    width: 148px;
+    height: 150px;
+  }
+  .upper,
+  .lower {
+    width: 140px;
+    height: 70px;
+  }
+  .line {
+    width: 135px;
+    height: 1.5px;
+  }
+  .number {
+    width: 96px;
+    height: 71px;
+    font-size: 80px;
+    line-height: 71px;
+    text-align: center;
+    letter-spacing: -2.4px;
+  }
+  .grid {
+    margin-top: 16px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 5.91875px;
+    width: 140px;
+  }
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+  .dot-1 {
+    left: -5px;
+  }
+  .dot-2 {
+    right: -5px;
+  }
+}

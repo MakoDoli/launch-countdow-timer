@@ -2,6 +2,7 @@ import "./App.css";
 import Contacts from "./Components/Contacts";
 import { useEffect, useState } from "react";
 import Numbers from "./Components/Numbers";
+import "./Desktop.css";
 
 function App() {
   const [days, setDays] = useState<number>(0);
